@@ -1,0 +1,4 @@
+# Ignore Mac system files
+16k_multiple_nodes/*
+
+slurm/*

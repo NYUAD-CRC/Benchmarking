@@ -1,4 +1,9 @@
 # Ignore Mac system files
-16k_multiple_nodes/*
 
 slurm/*
+16k_one_node/*
+16k_multiple_nodes/*
+32k_one_node/*
+64k_one_node/*
+128k_one_node/*
+

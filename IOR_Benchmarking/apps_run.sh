@@ -13,7 +13,8 @@ sleep 20
 
 outdir=$1
 tr_size=$2
-cd ./bin
+working_directory=$PWD
+cd $working_directory/bin
 module load gcc openmpi
 
 #write all unwritten system buffers to disk
@@ -28,5 +29,5 @@ sleep 20
 #-C   : reorderTasksConstant – changes task ordering to n+1 ordering for readback
 #-F   :	filePerProc – file-per-process
 #-o   : testFile – full name for test
-echo "srun ./ior -t${tr_size}k -b4g -w  -C -F  -o ./$outdir/log/$SLURM_NTASKS.bin"
-srun ./ior -t${tr_size}k -b4g -w  -C -F  -o /scratch/apps/GPU_Benchmark/Benchmarking/IOR_Benchmarking/$outdir/log/$SLURM_NTASKS.bin > /scratch/apps/GPU_Benchmark/Benchmarking/IOR_Benchmarking/$outdir/$SLURM_NTASKS.txt 
+echo "srun ior -t${tr_size}k -b4g -w  -C -F   -o $working_directory/$outdir/log/$SLURM_NTASKS.bin > $working_directory/$outdir/$SLURM_NTASKS.txt"
+srun ior -t${tr_size}k -b4g -w  -C -F  -o $working_directory/$outdir/log/$SLURM_NTASKS.bin > $working_directory/$outdir/$SLURM_NTASKS.txt" 

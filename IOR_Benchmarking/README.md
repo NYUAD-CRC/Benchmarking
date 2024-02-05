@@ -30,7 +30,7 @@ mkdir -p slurm
      ```
     For exmaple: Using **16k** block size and output directory **16k_multiple_nodes**
     ```console
-        sbatch apps_run.sh 16k_multiple_nodes 16
+    sbatch apps_run.sh 16k_multiple_nodes 16
      ```
 
 **Testing one node with different block sizes:**
@@ -51,6 +51,6 @@ mkdir -p slurm
      ```
     For exmaple: Using **32k** block size and output directory **32k_one_node**
     ```console
-        sbatch one_node_apps_run.sh 32k_one_node 32
+    sbatch one_node_apps_run.sh 32k_one_node 32
      ```
 

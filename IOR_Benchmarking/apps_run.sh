@@ -30,4 +30,4 @@ sleep 20
 #-F   :	filePerProc – file-per-process
 #-o   : testFile – full name for test
 echo "srun ior -t${tr_size}k -b4g -w  -C -F   -o $working_directory/$outdir/log/$SLURM_NTASKS.bin > $working_directory/$outdir/$SLURM_NTASKS.txt"
-srun ior -t${tr_size}k -b4g -w  -C -F  -o $working_directory/$outdir/log/$SLURM_NTASKS.bin > $working_directory/$outdir/$SLURM_NTASKS.txt" 
+srun ior -t${tr_size}k -b4g -w  -C -F  -o $working_directory/$outdir/log/$SLURM_NTASKS.bin > $working_directory/$outdir/$SLURM_NTASKS.txt 
